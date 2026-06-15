@@ -1,0 +1,17 @@
+name: minimal-sandbox
+hosts:
+  - name: target-box
+    base_box:
+      image: debian-12-x86_64
+      mgmt_user: debian
+    flavor: standard.small
+
+networks:
+  - name: main-switch
+    cidr: 10.10.10.0/24
+    accessible_by_user: true
+
+net_mappings:
+  - host: target-box
+    network: main-switch
+    ip: 10.10.10.5
