@@ -6,7 +6,6 @@ hosts:
       mgmt_user: debian
     flavor: standard.small
 
-# Der Parser benötigt diese Sektion zwingend
 routers: []
 
 networks:
@@ -19,5 +18,7 @@ net_mappings:
     network: main-switch
     ip: 10.10.10.5
 
-# Auch diese Sektion muss als leere Liste definiert sein
 router_mappings: []
+
+# Dieses Feld hat dem Parser jetzt noch gefehlt:
+groups: []
