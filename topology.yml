@@ -6,6 +6,9 @@ hosts:
       mgmt_user: debian
     flavor: standard.small
 
+# Der Parser benötigt diese Sektion zwingend
+routers: []
+
 networks:
   - name: main-switch
     cidr: 10.10.10.0/24
@@ -15,3 +18,6 @@ net_mappings:
   - host: target-box
     network: main-switch
     ip: 10.10.10.5
+
+# Auch diese Sektion muss als leere Liste definiert sein
+router_mappings: []
